@@ -1,0 +1,1061 @@
+<script>
+    let buildMain = "<span style='color: var(--theme-primary)'><b>A51.1</b></span>";
+</script>
+<audio id="sfxDeleteConsole" src="./assets/sounds/sfxDeleteConsole.wav"></audio>
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Colombo 2.0</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./styles/default/assistant.css">
+    <link rel="stylesheet" href="./styles/default/fullscreen.css">
+    <link rel="stylesheet" href="./styles/default/compact.css">
+    <link rel="stylesheet" href="./styles/default/2160p.css">
+    <link rel="stylesheet" href="./assets/fontawesome/css/all.css">
+    <link rel="stylesheet" href="./styles/default/windows-buttons.css">
+    <link rel="stylesheet" href="./node_modules/animate.css/animate.css">
+    <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="./node_modules/flatpickr/dist/flatpickr.css">
+    <link rel="stylesheet" href="./node_modules/alertifyjs/build/css/alertify.css">
+    <link rel="stylesheet" href="./node_modules/pretty-checkbox/dist/pretty-checkbox.css">
+    <link rel="stylesheet" href="./node_modules/alertifyjs/build/css/themes/semantic.css">
+</head>
+
+<body>
+    <img src="./assets/images/exit.gif" id="exit">
+
+    <div id="topbar">
+
+        <div id="dragbar">
+            <span id="app-title">Colombo 2.0</span>
+        </div>
+
+        <div id="windowsBtnStyle1">
+            <div id="minimize" class="ui-button"><span class="dot yellow"><span class="small-dot-yellow"></span></span>
+            </div>
+            <div id="maximize" class="ui-button"><span class="dot green"><span class="small-dot-green"></span></span>
+            </div>
+            <div id="close" class="ui-button"><span class="dot red"><span class="small-dot-red"></span></span></div>
+        </div>
+
+        <div id="windowsBtnStyle2">
+            <div id="minimize2" class="ui-button">
+                <i class="buttons-style-2">&#xE949</i>
+            </div>
+            <div id="maximize2" class="ui-button">
+                <i class="buttons-style-2">&#xE739</i>
+            </div>
+            <div id="close2" class="ui-button">
+                <i class="buttons-style-2">&#xE106</i>
+            </div>
+        </div>
+
+        <div id="windowsBtnStyle3">
+            <div id="minimize3" class="ui-button"><span class="dot yellow3"></span></span></div>
+            <div id="maximize3" class="ui-button"><span class="dot green3"></span></div>
+            <div id="close3" class="ui-button"><span class="dot red3"></span></div>
+        </div>
+
+    </div>
+
+    <div id="tongue">
+        <div id="cover"></div>
+    </div>
+
+    <div id="param-container">
+
+        <div id="param" class="animate__animated animate__zoomIn ">
+
+            <div id="param-topbar">
+                <div id="param-dragbar"><span id="app-title-param">Paramètres</span></div>
+                <div id="param-close1" class="ui-button"><span class="dot red"><span
+                            class="small-dot-red"></span></span>
+                </div>
+
+                <div id="param-close2" class="ui-button"><i class="buttons-style-2">&#xE106</i></div>
+
+                <div id="param-close3" class="ui-button">
+                    <i class="buttons-style-3">
+                        <div id="close3" class="ui-button"><span class="dot red3"></span></div>
+                    </i>
+                </div>
+            </div>
+
+
+            <div id="param-sidebar">
+
+                <div id="param-section-container">
+
+                    <div id="sound-toggle">
+
+                        <div class="pretty p-icon p-toggle p-plain soundActivated">
+                            <input id="toggleSounds" title="toggleSounds" type="checkbox" />
+                            <div class="state p-success-o p-off">
+                                <i class="fa-duotone fa-music-note soundActivated"></i>
+                                <label class="soundActivated" style="margin-left:-16px;">Sons activés</label>
+                            </div>
+
+                            <div class="state p-on soundActivated">
+                                <i class="fa-duotone fa-music-note-slash soundActivated"></i>
+                                <label class="soundActivated" style="margin-left:-16px;">Sons désactivés</label>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div id="console-section" class="param-section param-section-activated" style="margin-top:40px">
+                        Console</div>
+                    <div id="assistant-section" class="param-section">Assistant d'appels</div>
+                    <div id="theme-section" class="param-section">Thème & Animations</div>
+                    <div id="update-section" class="param-section">Vérifier mises à jour</div>
+                    <div id="credits-section" class="param-section">Crédits</div>
+                    <div id="build-section" class="param-build">Build
+                        <script>
+                            document.write(buildMain);
+                        </script>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="param-console-content" class="animate__animated">
+
+                <div class="line2">
+                    <div class="pretty p-icon p-smooth">
+                        <input type="checkbox" id="copyauto" name="copyauto" class="cb"
+                            style="cursor: url(./assets/images//cursors/Hand.cur), auto;" />
+                        <div class="state p-success"> <i class="icon fa fa-check"></i>
+                            <label for="copyauto"
+                                style="cursor: url(./assets/images//cursors/Hand.cur), auto;">Confirmer avant de
+                                quitter</label>
+                        </div>
+                    </div>
+
+
+                    <div class="pretty p-icon p-smooth">
+                        <input type="checkbox" id="copyauto" name="copyauto" class="cb"
+                            style="cursor: url(./assets/images//cursors/Hand.cur), auto;" />
+                        <div class="state p-success"><i class="icon fa fa-check"></i>
+                            <label for="copyauto" style="cursor: url(./assets/images//cursors/Hand.cur), auto;">Fonction
+                                un clique copié</label>
+                        </div>
+                    </div>
+
+                    <div class="pretty p-icon p-smooth">
+                        <input type="checkbox" id="copyauto" name="copyauto" class="cb"
+                            style="cursor: url(./assets/images//cursors/Hand.cur), auto;" />
+                        <div class="state p-success"><i class="icon fa fa-check"></i>
+                            <label for="copyauto" style="cursor: url(./assets/images//cursors/Hand.cur), auto;">Copie
+                                automatique des résultats</label>
+                        </div>
+                    </div>
+
+
+                    <div class="pretty p-icon p-smooth">
+                        <input type="checkbox" id="confirmdelete" name="confirmdelete" class="cb"
+                            style="cursor: url(./assets/images//cursors/Hand.cur), auto;" />
+                        <div class="state p-success"><i class="icon fa fa-check"></i>
+                            <label for="confirmdelete"
+                                style="cursor: url(./assets/images//cursors/Hand.cur), auto;">Confirmer avant de
+                                supprimer les résultats</label>
+                        </div>
+                    </div>
+
+                    <div class="comments fa-switcher"
+                        onclick="callComments(); soundPlay('sfxWrite.wav'); soundPlay('sfxClick.wav')"><i
+                            class="fa-duotone fa-comment-captions"></i> <span>Laissez-nous vos commentaires</span></div>
+
+                    <!-- Function callComments() that is called with the button above. -->
+                    <script>
+                        function callComments() {
+                            paramPanel.classList.add("animate__zoomOut");
+                            paramContainer.classList.remove("param-dimmer");
+                            setTimeout(function () {
+                                paramPanel.style.display = "none";
+                                paramPanel.classList.remove("animate__zoomOut");
+                            }, 800);
+                            alertify.prompt("Veuillez nous soumettre vos commentaires.",
+                                    "Entrez votre commentaire ici.",
+                                    function (evt, value) {
+                                        alertify.message("Votre commentaire a bien été soumis.");
+                                    })
+                                .set("labels", {
+                                    ok: "<i style='margin-right:6px' class='fa-duotone fa-paper-plane-top'></i>" +
+                                        " Envoyer",
+                                    cancel: "<i style='margin-right:6px;' class='fa-duotone fa-ban'></i>" + " " +
+                                        " Annuler"
+                                })
+                                .set({
+                                    title: "Votre opinion est importante."
+                                })
+                                .set({
+                                    transition: 'flipx'
+                                })
+                                .set('movable', false);
+                        }
+                    </script>
+
+                </div>
+
+            </div>
+
+            <div id="param-assistant-content" class="animate__animated">
+
+                <div class="line2">
+                    <div class="pretty p-icon p-smooth"><input type="checkbox" id="avenir" name="avenir" class="cb"
+                            style="cursor: url(./assets/images//cursors/Hand.cur), auto;" />
+                        <div class="state p-success"><i class="icon fa fa-check"></i><label for="avenir"
+                                style="cursor: url(./assets/images//cursors/Hand.cur), auto;">Enregistrer les
+                                appels
+                                automatiquement</label>
+                        </div>
+                    </div>
+
+                    <div class="pretty p-icon p-smooth">
+                        <input type="checkbox" id="avenir2" name="avenir2" class="cb"
+                            style="cursor: url(./assets/images//cursors/Hand.cur), auto;" />
+                        <div class="state p-success">
+                            <i class="icon fa fa-check"></i>
+                            <label for="avenir2" style="cursor: url(./assets/images//cursors/Hand.cur), auto;">Afficher
+                                le bouton d'accessibilité rapide</label>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="param-theme-content" class="animate__animated">
+
+                <br> <span><u>Animations</u> :</span><br>
+                <div class="line2">
+
+                    <div class="pretty p-icon p-smooth">
+                        <input type="checkbox" id="glowing" name="glowing" class="cb"
+                            style="cursor: url(./assets/images//cursors/Hand.cur), auto;" checked />
+                        <div class="state p-success">
+                            <i class="icon fa fa-check"></i>
+                            <label for="glowing" style="cursor: url(./assets/images//cursors/Hand.cur), auto;">Effet
+                                embrasé</label>
+                        </div>
+                    </div>
+
+                    <div class="pretty p-icon p-smooth">
+                        <input type="checkbox" id="paramAni" name="paramAni" class="cb"
+                            style="cursor: url(./assets/images//cursors/Hand.cur), auto;" checked />
+                        <div class="state p-success">
+                            <i class="icon fa fa-check"></i>
+                            <label for="paramAni" style="cursor: url(./assets/images//cursors/Hand.cur), auto;">Fenêtre
+                                des
+                                paramètres</label>
+                        </div>
+                    </div>
+
+                    <div class="pretty p-icon p-smooth">
+                        <input type="checkbox" id="consoleDel" name="consoleDel" class="cb"
+                            style="cursor: url(./assets/images//cursors/Hand.cur), auto;" checked />
+                        <div class="state p-success">
+                            <i class="icon fa fa-check"></i>
+                            <label for="consoleDel"
+                                style="cursor: url(./assets/images//cursors/Hand.cur), auto;">Supression de la
+                                console</label>
+                        </div>
+                    </div>
+
+                    <div class="pretty p-icon p-smooth">
+                        <input type="checkbox" id="pagesAni" name="pagesAni" class="cb"
+                            style="cursor: url(./assets/images//cursors/Hand.cur), auto;" checked />
+                        <div class="state p-success">
+                            <i class="icon fa fa-check"></i>
+                            <label for="pagesAni"
+                                style="cursor: url(./assets/images//cursors/Hand.cur), auto;">Changement de
+                                pages</label>
+                        </div>
+                    </div>
+
+                    <div class="pretty p-icon p-smooth">
+                        <input type="checkbox" id="consoleMax" name="consoleMax" class="cb"
+                            style="cursor: url(./assets/images//cursors/Hand.cur), auto;" checked />
+                        <div class="state p-success">
+                            <i class="icon fa fa-check"></i>
+                            <label for="consoleMax"
+                                style="cursor: url(./assets/images//cursors/Hand.cur), auto;">Maximisation de la
+                                console</label>
+                        </div>
+                    </div>
+
+                    <div class="pretty p-icon p-smooth">
+                        <input type="checkbox" id="consoleRes" name="consoleRes" class="cb"
+                            style="cursor: url(./assets/images//cursors/Hand.cur), auto;" checked />
+                        <div class="state p-success">
+                            <i class="icon fa fa-check"></i>
+                            <label for="consoleRes"
+                                style="cursor: url(./assets/images//cursors/Hand.cur), auto;">Résultats de la
+                                console</label>
+                        </div>
+                    </div>
+
+                </div>
+                <br>
+                <span><u>Thème</u> :</span><br>
+                <div class="custom-select" style="margin-top:1rem;">
+                    <select>
+                        <option value="0">Détective (Par défaut)</option>
+                        <option value="1">Détective (Par défaut)</option>
+                        <option value="2">Basique</option>
+                        <option value="3">Infernal</option>
+                        <option value="4">Abyssal</option>
+                    </select>
+                </div><br><br>
+
+                <span><u>Style des boutons</u> :</span><br><br>
+
+                <div id="topbar-1-demo" class="topbar-1-demo-selected" style="animation:none;">
+
+                    <div id="dragbar" style="animation:none; -webkit-app-region: none; margin-left:15px;">
+                        <span id="windowsBtnStyle-title"><i>Pomme arrondie</i></span>
+                    </div>
+                    <div id="minimize" class="ui-button"><span class="dot yellow"><span
+                                class="small-dot-yellow"></span></span>
+                    </div>
+                    <div id="maximize" class="ui-button"><span class="dot green"><span
+                                class="small-dot-green"></span></span></div>
+                    <div id="close" class="ui-button"><span class="dot red"><span class="small-dot-red"></span></span>
+                    </div>
+
+                </div><br>
+
+                <div id="topbar-2-demo" style="animation:none;">
+                    <div id="dragbar" style="animation:none; -webkit-app-region: none; margin-left:15px;">
+                        <span id="windowsBtnStyle-title"><i>Fenêtré carré</i></span>
+                    </div>
+                    <div id="minimize" class="ui-button">
+                        <i class="buttons-style-2">&#xE949</i>
+                    </div>
+                    <div id="maximize" class="ui-button">
+                        <i class="buttons-style-2">&#xE739</i>
+                    </div>
+                    <div id="close" class="ui-button">
+                        <i class="buttons-style-2">&#xE106</i>
+                    </div>
+                </div><br>
+
+                <div id="topbar-3-demo" style="animation:none;">
+                    <div id="dragbar" style="animation:none; -webkit-app-region: none; margin-left:15px;">
+                        <span id="windowsBtnStyle-title"><i>Minimaliste</i></span>
+                    </div>
+                    <div id="minimize" class="ui-button"><span class="dot yellow3"></span></span>
+                    </div>
+                    <div id="maximize" class="ui-button"><span class="dot green3"></span></div>
+                    <div id="close" class="ui-button"><span class="dot red3"></span>
+                    </div>
+                </div><br><br>
+
+                <span><u>Nuance du thème</u> :</span>
+
+                <div id="colors-container">
+                    <div id="nuanceDefault" class="color colorJS"></div>
+                    <div id="nuance1" class="color"></div>
+                    <div id="nuance2" class="color"></div>
+                    <div id="nuance3" class="color"></div>
+                    <div id="nuance4" class="color"></div>
+                    <div id="nuance5" class="color"></div>
+                    <div id="nuance6" class="color"></div>
+                    <div id="nuance7" class="color"></div>
+                    <div id="nuance8" class="color"></div>
+                    <div id="nuance9" class="color"></div>
+                    <div id="nuance10" class="color"></div>
+                </div><br>
+
+                <span><u>Texte de la console</u> :</span>
+
+                <div id="console-colors-container">
+                    <div id="def" class="console-color colorJS"></div>
+                    <div id="grey" class="console-color"></div>
+                    <div id="white" class="console-color"></div>
+                    <div id="black" class="console-color"></div>
+                </div><br>
+
+            </div>
+
+            <div id="param-update-content" class="animate__animated">
+
+                <div class="line2">
+                    <div class="state p-success"><u>Votre version</u> :
+                        <script>
+                            document.write(buildMain);
+                        </script>
+                    </div>
+
+                </div>
+
+                <div class="line2">
+                    <div class="state p-success"><u>Dernière version disponible</u> : Aucune vérification de
+                        version
+                        n'est
+                        disponible pour le moment. Veuillez réessayer plus tard. Pour l'instant, vous pouvez
+                        consulter
+                        le Github du projet.</div>
+
+                    <div class="line2">
+                        <div data-hover="Mettre à jour l'application" class="btn2 hovertext" style="background:grey;">
+                            <span class="btn-text"><i class="fa-duotone fa-cloud-arrow-down fa-3x"></i></span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="param-credits-content" class="animate__animated">
+
+                <div class='wrapper'>
+
+                    <div class='movie'>
+
+                        <div class="line2-credits">
+                            Développé par <b>Yan Noël</b> sous <i>ElectronJS</i>. <br><br>
+
+                            Languages de programmation utilisés: <b>HTML</b>, <b>CSS</b>, <b>Javascript</b> &
+                            <b>Powershell</b>.<br><br>
+
+                            Merci à <b>Rémy Roy</b> & <b>Alain Jean</b> pour le développement de toutes les
+                            premières
+                            versions de Colombo &
+                            Famille Colombo, sans quoi ce projet n'aurait pas été possible. <br><br>
+
+                            Merci également à <b>Skudar</b> & <b>Midori</b> pour leur aide, leur soutien et leur
+                            temps
+                            précieux.<br><br>
+
+                            <u>Lien Github du projet</u> : https://github.com/Lunar94/Colombo-2<br><br>
+
+                            <u>Licence</u> : <br>
+                            <div id="licence">
+                                Contrat de licence
+                                applicable à compter du XXX [date]
+                                Logiciel / application : XXX [désignation du logiciel ou de l’application]
+                                (ci-après
+                                désigné le
+                                logiciel).
+                                <br><br>
+                                Auteur du logiciel : XXX [identification de l’auteur]
+                                <br><br>
+                                Éditeur du logiciel : XXX [identification complète de l’éditeur et coordonnées
+                                postales,
+                                téléphoniques et électroniques] (ci-après désigné l’éditeur).
+                                <br><br>
+                                IMPORTANT – L’installation ou l’utilisation du logiciel impliquent l’acceptation
+                                sans
+                                réserve du
+                                contrat de licence. Ce contrat est également applicable à toute mise à jour
+                                ultérieure
+                                ou toute
+                                nouvelle version du logiciel.
+                                <br><br>
+                                Le contrat de licence est conclu entre l’éditeur du logiciel et l’utilisateur de
+                                ce
+                                logiciel.
+                                <br><br>
+                                Propriété intellectuelle – Licence d’utilisation
+                                L’éditeur est le détenteur exclusif des droits patrimoniaux de propriété
+                                intellectuelle
+                                du
+                                logiciel
+                                et de l’intégralité des contenus incorporés au logiciel, sauf éventuelle mention
+                                contraire.
+                                <br><br>
+                                L’éditeur conserve la propriété du logiciel ainsi que des contenus incorporés au
+                                logiciel et
+                                consent
+                                à l’utilisateur une licence d’utilisation non exclusive du logiciel et des
+                                contenus.
+                                Cette
+                                licence
+                                est incessible. L’utilisateur n’est pas autorisé à concéder de sous-licence.
+                                <br><br>
+                                La licence est consentie pour XXX [préciser, par exemple : la France // le
+                                monde].
+                                Elle
+                                est
+                                valable
+                                pour une durée XXX [préciser, par exemple : déterminée d’un an renouvelable
+                                tacitement
+                                pour une
+                                ou
+                                plusieurs périodes d’une durée identique à la durée initiale, sauf en cas de
+                                résiliation
+                                notifiée au
+                                mois trois mois avant le terme, par tout moyen écrit probant // indéterminée //
+                                égale à
+                                la durée
+                                de
+                                l’abonnement souscrit par l’utilisateur]. La licence sera résiliée,
+                                immédiatement et
+                                automatiquement, sans formalité, en cas de manquement de l’utilisateur au
+                                présent
+                                contrat.
+                                <br><br>
+                                L’éditeur se réserve tous les droits qui ne sont pas expressément conférés à
+                                l’utilisateur par
+                                le
+                                présent contrat.
+                                <br><br>
+                                Description et destination du logiciel – Caractéristiques essentielles du
+                                logiciel
+                                et
+                                fonctionnalités du contenu numérique
+                                Le logiciel XXX [description du logiciel, de ses fonctionnalités].
+                                <br><br>
+                                Le logiciel est destiné à être utilisé par des employés, dans le cadre d’un usage
+                                professionnel, pour CAA-QUÉBEC.
+
+                                [finalité].
+                                <br><br>
+                                Les fonctionnalités du contenu numérique sont les suivantes : XXX [compléter].
+                                <br><br>
+                                Avertissement – Consignes d’utilisation
+                                XXX [insérer les avertissements importants, les consignes d’utilisation du
+                                logiciel].
+                                <br><br>
+                                L’utilisateur est tenu d’utiliser le logiciel dans le respect des lois et
+                                règlements
+                                applicables
+                                en
+                                France et à l’endroit où le logiciel est utilisé.
+                                <br><br>
+                                Le logiciel n’est pas conçu pour être utilisé dans des situations où des
+                                dysfonctionnements,
+                                erreurs
+                                ou inexactitudes du logiciel pourraient causer des préjudices quelconques.
+                                <br><br>
+                                Utilisation autorisée
+                                L’utilisateur est autorisé à installer le logiciel sur un appareil compatible et
+                                à
+                                utiliser les
+                                fonctionnalités du logiciel prévues par l’éditeur. Toute autre utilisation du
+                                logiciel
+                                non
+                                expressément autorisée par l’éditeur, est interdite. En particulier, sont
+                                proscrits
+                                : la
+                                copie
+                                de
+                                tout ou partie du logiciel, l’ingénierie inverse, la décompilation, le
+                                désassemblage
+                                du
+                                logiciel, le
+                                déchiffrage ou la modification du code source.
+                                <br><br>
+                                L’utilisateur est autorisé à consulter les contenus (notamment les textes, sons,
+                                photographies,
+                                vidéos, dessins, cartes et autres représentations graphiques) dans le logiciel.
+                                Toute
+                                autre
+                                utilisation des contenus non expressément autorisée par l’éditeur, est
+                                interdite. En
+                                particulier, il
+                                est proscrit d’extraire les contenus du logiciel.
+                                <br><br>
+                                L’éditeur se réserve le droit exclusif de corriger les éventuelles erreurs
+                                affectant
+                                le
+                                logiciel
+                                et
+                                de déterminer les modalités particulières auxquelles seront soumis la
+                                reproduction
+                                permanente ou
+                                provisoire du logiciel, ainsi que la traduction, l’adaptation, l’arrangement ou
+                                toute
+                                autre
+                                modification du logiciel. Ces modalités XXX [préciser, par exemple : seront
+                                communiquées
+                                à
+                                l’utilisateur qui en formule la demande à l’adresse XXX [adresse] // sont
+                                publiées à
+                                l’adresse
+                                XXX
+                                [adresse]].
+                                <br><br>
+                                Interopérabilité – XXX [À VOIR : cf. article L. 122-6-1 du code de la propriété
+                                intellectuelle.
+                                Préciser, par exemple : Les informations nécessaires à l’interopérabilité sont
+                                rendues
+                                facilement et
+                                rapidement accessibles aux personnes ayant le droit d’utiliser un exemplaire du
+                                logiciel, comme
+                                suit
+                                : XXX [modalités]].
+                                <br><br>
+                                Configuration – pré-requis techniques
+                                Le logiciel est conçu pour fonctionner avec les systèmes d’exploitation suivants
+                                :
+                                XXX
+                                [compléter].
+                                <br><br>
+                                La configuration minimale requise est la suivante : XXX [compléter, préciser
+                                notamment
+                                si une
+                                connexion à Internet est requise pour utiliser le logiciel].
+                                <br><br>
+                                Tu as vraiment tout lu ça jusqu'en bas ? ;)
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <main>
+
+        <div id="content">
+
+            <div id="upper-part">
+
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide swiper-no-swiping">
+
+                            <div id="slide-1">
+
+                                <input id="computer" maxlength='7' title="poste" value='' />
+                                <div id="computer-type-container">
+                                    <i class="fa-duotone fa-laptop fa-2x" style="margin-top:1px;"></i>
+                                    <i class="fa-duotone fa-computer fa-2x"></i>
+                                </div>
+
+
+
+
+                                <div id="buttons">
+
+
+
+                                    <div onclick="cashOut()"
+                                        data-hover="Informations sur le système d'exploitation et sur le blablabli lorem osisidk Informations sur le système d'exploitation et sur le blablabli lorem osisidkInformations sur le système d'exploitation et sur le blablabli lorem osisidkInformations sur le système d'exploitation et sur le blablabli lorem osisidkInformations sur le système d'exploitation et sur le blablabli lorem osisidk"
+                                        data-psfile="doThis" class="btn hovertext list-group-item"><span
+                                            data-psfile="doThis" class="btn-text"><i data-psfile="doThis"
+                                                class="fa-brands fa-windows fa-4x"></i></span>
+                                        <span class="btnLabel">Windows</span>
+
+                                    </div>
+
+
+                                    <div onclick="cashOut()"
+                                        data-hover="Vérifier la taille du ou des disques durs local"
+                                        data-psfile="diskSpace" class="btn hovertext list-group-item">
+                                        <span data-psfile="diskSpace" class="btn-text"><i data-psfile="diskSpace"
+                                                class="fa-duotone fa-hard-drive fa-4x"></i></span>
+                                        <span class="btnLabel">Stockage</span>
+                                    </div>
+
+                                    <div onclick="cashOut()" data-hover="Informations générales sur la version du Bios"
+                                        data-psfile="biosInfo" class="btn hovertext">
+                                        <span data-psfile="biosInfo" class="btn-text"><i data-psfile="biosInfo" class="fa-duotone
+                                                fa-monitor-waveform fa-4x"></i></span>
+                                        <span class="btnLabel">Bios</span>
+                                    </div>
+
+                                    <div onclick="cashOut()" data-hover="Est-ce que le poste répond bien aux paquets ?"
+                                        data-psfile="ping" class="btn hovertext"><span data-psfile="ping"
+                                            class="btn-text"><i data-psfile="ping"
+                                                class="fa-duotone fa-table-tennis-paddle-ball fa-4x"></i></span>
+                                        <span class="btnLabel">Ping</span>
+                                    </div>
+
+                                    <div onclick="cashOut()"
+                                        data-hover="Sortir la liste complète des logiciels installés"
+                                        data-psfile="doThis" class="btn hovertext"><span data-psfile="doThis"
+                                            class="btn-text"><i data-psfile="doThis"
+                                                class="fa-brands fa-uncharted fa-4x"></i></span>
+                                        <span class="btnLabel">Logiciels</span>
+                                    </div>
+
+                                    <div onclick="cashOut()"
+                                        data-hover="Installer un ou plusieurs logiciels sur le poste"
+                                        data-psfile="doThis" class="btn hovertext"><span data-psfile="doThis"
+                                            class="btn-text"><i data-psfile="doThis"
+                                                class="fa-duotone fa-display-arrow-down fa-4x"></i></span>
+                                        <span class="btnLabel">Installer</span>
+                                    </div>
+
+                                    <div onclick="cashOut()" data-hover="Redémarrer le poste à distance [maintenir]"
+                                        data-psfile="doThis" class="btn hovertext"><span data-psfile="doThis"
+                                            class="btn-text"><i data-psfile="doThis"
+                                                class="fa-duotone fa-power-off fa-4x"></i></span>
+                                        <span class="btnLabel">Alimentation</span>
+                                    </div>
+
+                                    <div onclick="cashOut()" data-hover="Transfert de fichiers d'un poste à l'autre"
+                                        data-psfile="doThis" class="btn hovertext">
+                                        <span data-psfile="doThis" class="btn-text"><i data-psfile="doThis"
+                                                class=" fa-duotone fa-arrow-right-arrow-left fa-4x"></i></span>
+                                        <span class="btnLabel">P2P</span>
+                                    </div>
+
+                                    <div onclick="cashOut()" data-hover="Libérer de l'espace sur le disque local C:\"
+                                        data-psfile="doThis" class="btn hovertext"><span data-psfile="doThis"
+                                            class="btn-text"><i data-psfile="doThis"
+                                                class="fa-duotone fa-broom fa-4x"></i></span>
+                                        <span class="btnLabel">Nettoyer</span>
+                                    </div>
+
+                                    <div onclick="cashOut()"
+                                        data-hover="Ouvrir le répertoire Outlook contenant le fichier .ost"
+                                        data-psfile="doThis" class="btn hovertext"><span data-psfile="doThis"
+                                            class="btn-text"><i data-psfile="doThis"
+                                                class="fa-duotone fa-envelopes-bulk fa-4x"></i></span>
+                                        <span class="btnLabel">Outlook</span>
+                                    </div>
+
+                                    <div onclick="cashOut()" data-hover="Contrôle à distance - ShadowRDP"
+                                        data-psfile="doThis" class="btn hovertext"><span data-psfile="doThis"
+                                            class="btn-text"><i data-psfile="doThis"
+                                                class="fa-duotone fa-signal-stream fa-4x"></i></span>
+                                        <span class="btnLabel">Contrôle</span>
+                                    </div>
+
+                                    <div onclick="cashOut()" data-hover="Rechercher ce poste dans l'Active Directory"
+                                        data-psfile="doThis" class="btn hovertext"><span data-psfile="doThis"
+                                            class="btn-text"><i data-psfile="doThis"
+                                                class="fa-duotone fa-rectangle-ad fa-4x"></i></span>
+                                        <span class="btnLabel">AD</span>
+                                    </div>
+
+
+                                    <div onclick="cashOut()" data-hover="Sortir le mot de passe LapsUI"
+                                        data-psfile="doThis" class="btn hovertext"><span data-psfile="doThis"
+                                            class="btn-text"><i data-psfile="doThis"
+                                                class="fa-duotone fa-key fa-4x"></i></span>
+                                        <span class="btnLabel">LapsUI</span>
+                                    </div>
+
+                                    <div onclick="cashOut()" data-hover="Sortir la version installée d'Office 365"
+                                        data-psfile="doThis" class="btn hovertext"><span data-psfile="doThis"
+                                            class="btn-text"><i data-psfile="doThis"
+                                                class="fa-duotone fa-briefcase-blank fa-4x"></i></span>
+                                        <span class="btnLabel">Office 365</span>
+                                    </div>
+
+                                    <div onclick="cashOut()"
+                                        data-hover="Sortir les imprimantes d'installées sur le poste"
+                                        data-psfile="doThis" class="btn hovertext"><span data-psfile="doThis"
+                                            class="btn-text"><i data-psfile="doThis"
+                                                class="fa-duotone fa-print fa-4x"></i></span>
+                                        <span class="btnLabel">Imprimantes</span>
+                                    </div>
+
+                                    <div onclick="cashOut()" data-hover="Ouvrir le c:\ distant" data-psfile="doThis"
+                                        class="btn hovertext">
+                                        <span data-psfile="doThis" class="btn-text"><i data-psfile="doThis"
+                                                class="fa-duotone fa-circle-c fa-4x"></i></span>
+                                        <span class="btnLabel">C:\</span>
+                                    </div>
+
+                                    <div onclick="cashOut()" data-hover="Kill un process distant" data-psfile="doThis"
+                                        class="btn hovertext">
+                                        <span data-psfile="doThis" class="btn-text"><i data-psfile="doThis"
+                                                class="fa-duotone fa-microchip fa-4x"></i></span>
+                                        <span class="btnLabel">Process</span>
+                                    </div>
+
+                                    <div onclick="cashOut()" data-hover="Sortir le hardware du poste"
+                                        data-psfile="doThis" class="btn hovertext"><span data-psfile="doThis"
+                                            class="btn-text"><i data-psfile="doThis"
+                                                class="fa-duotone fa-memory fa-4x"></i></span>
+                                        <span class="btnLabel">Hardware</span>
+                                    </div>
+
+                                    <div onclick="cashOut()" data-hover="CptMgmt" data-psfile="doThis"
+                                        class="btn hovertext">
+                                        <span data-psfile="doThis" class="btn-text"><i data-psfile="doThis"
+                                                class="fa-duotone fa-list-tree fa-4x"></i></span>
+                                        <span class="btnLabel">CptMgmt</span>
+                                    </div>
+
+                                    <div onclick="cashOut()" data-hover="Colombo" data-psfile="doThis"
+                                        class="btn hovertext">
+                                        <span data-psfile="doThis" class="btn-text"><i data-psfile="doThis"
+                                                class="fa-duotone fa-magnifying-glass-arrow-right fa-4x"></i></span>
+                                        <span class="btnLabel">Colombo</span>
+                                    </div>
+
+                                    <div onclick="cashOut()" data-hover="Services Windows" data-psfile="doThis"
+                                        class="btn hovertext">
+                                        <span data-psfile="doThis" class="btn-text"><i data-psfile="doThis"
+                                                class="fa-duotone fa-bell-concierge fa-4x"></i></span>
+                                        <span class="btnLabel">Services</span>
+                                    </div>
+
+                                    <div onclick="cashOut()" data-hover="Historique" data-psfile="doThis"
+                                        class="btn hovertext">
+                                        <span data-psfile="doThis" class="btn-text"><i data-psfile="doThis"
+                                                class="fa-duotone fa-clock-rotate-left fa-4x"></i></span>
+                                        <span class="btnLabel">Historique</span>
+                                    </div>
+
+                                    <div onclick="cashOut()" data-hover="Historique" data-psfile="doThis"
+                                        class="btn hovertext">
+                                        <span data-psfile="doThis" class="btn-text"><i data-psfile="doThis"
+                                                class="fa-duotone fa-clock-rotate-left fa-4x"></i></span>
+                                        <span class="btnLabel">Historique</span>
+                                    </div>
+
+                                    <div onclick="cashOut()" data-hover="Historique" data-psfile="doThis"
+                                        class="btn hovertext">
+                                        <span data-psfile="doThis" class="btn-text"><i data-psfile="doThis"
+                                                class="fa-duotone fa-clock-rotate-left fa-4x"></i></span>
+                                        <span class="btnLabel">Historique</span>
+                                    </div>
+
+
+
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide swiper-no-swiping tocome">
+
+                            <div id="slide-2">
+                                <div id="bgs2" class="animate__animated"><i class="fa-duotone fa-phone fa-8x"></i>
+                                </div>
+
+                                <div id="new-incident" class="btn-assistant btn animate__animated">
+                                    <i class="fa-duotone fa-circle-plus fa-4x"></i>
+                                    <span class="btn-form-validate">Nouvel Incident</span>
+                                </div>
+
+                                <div id="new-demande" class="btn-assistant btn animate__animated"
+                                    style="margin-top: 5rem;">
+                                    <i class="fa-duotone fa-circle-plus fa-4x"></i>
+                                    <span class="btn-form-validate">Nouvelle Demande</span>
+                                </div>
+
+                                <form id="form-1" action="">
+
+                                    <input id="nom-prenom" class="field" title="nom-prenom" name="nom-prenom"
+                                        style="margin-bottom:-8px;" type="text" placeholder="Nom complet du client">
+
+                                    <br>
+
+                                    <div class="line3">
+
+                                        <div class="pretty p-switch p-slim switch1">
+                                            <input type="radio" name="switch1" class="cb" />
+                                            <div class="state p-success">
+                                                <label style="color:grey;">Poste Bureau</label>
+                                            </div>
+                                        </div>
+
+                                        <input id="poste-number" class="field" title="poste-number" name="poste-number"
+                                            style="margin-top: 0px" type="text"
+                                            placeholder="Q222666       /       Z222666"><br>
+
+                                        <div class="pretty p-switch p-slim switch2">
+                                            <input type="radio" name="switch1" class="cb" />
+                                            <div class="state p-success">
+                                                <label style="color:grey;">Poste Maison</label>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <input class="form-control field" type="datetime-local"
+                                        placeholder="Date des premiers symptômes">
+
+
+                                    <textarea id="enjeu" name="enjeu" rows="20" cols="50"
+                                        placeholder="Description de l'enjeu"></textarea>
+
+                                    <div class="line4">
+
+                                        <div class="btn-assistant btn">
+                                            <i class="fa-duotone fa-magnifying-glass-plus fa-4x"></i>
+                                            <span class="btn-form-validate">Débuter une nouvelle enquête</span>
+                                        </div>
+
+                                        <div id="cancelIncident" class="btn-assistant btn">
+                                            <i class="fa-duotone fa-rectangle-xmark fa-4x"></i>
+                                            <span class="btn-form-validate">Annuler</span>
+                                        </div>
+
+                                    </div>
+
+                                </form>
+
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide  swiper-no-swiping tocome">Page #3 à venir !</div>
+
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div data-hover="Retour" class="swiper-button-prev hovertext"></div>
+                    <div data-hover="Suivant" class="swiper-button-next hovertext"></div>
+
+                    <!-- If we need scrollbar -->
+                    <div class="swiper-scrollbar"></div>
+                </div>
+
+            </div>
+
+            <div id="console-glow"></div>
+
+            <div id="console" class="animate__animated">
+
+                <div data-hover="Supprimer" id="btn-clear" class="hovertext animate__animated animate__fadeIn">
+                    <i class="fa-duotone fa-trash-can fa-2x animate__animated"></i>
+                </div>
+
+                <div onclick="toggleClass()" id="btn-astuces" class="animate__animated animate__fadeIn">
+                    <i class="fa-duotone fa-message-question fa-2x animate__animated"></i>
+                </div>
+
+                <div data-hover="Paramètres" id="btn-param" class="hovertext animate__animated animate__fadeIn">
+                    <i id="btn-param-icon" class="fa-duotone fa-gear fa-2x animate__animated"></i>
+                </div>
+
+                <div data-hover="Agrandir" id="btn-more" class="hovertext animate__animated animate__fadeIn">
+                    <i id="btn-more-icon" class="fa-duotone fa-expand fa-2x animate__animated"></i>
+                </div>
+
+                <div id="inner-console">
+                    <div id="output" class="response animate__animated"></div>
+                </div>
+
+            </div>
+
+
+    </main>
+
+
+
+
+    <!-- JS SCRIPTS SOURCES -->
+    <script src="./node_modules/swiper/swiper-bundle.js"></script>
+    <script src="./node_modules/alertifyjs/build/alertify.js"></script>
+    <script src="./node_modules/vanilla-context-menu/dist/vanilla-context-menu.js"></script>
+    <script src="./node_modules/hotkeys-js/dist/hotkeys.js"></script>
+    <script src="./node_modules/flatpickr/dist/flatpickr.js"></script>
+    <script src="./node_modules/sortablejs/Sortable.min.js"></script>
+
+
+    <!-- HOME MADE JS SCRIPTS -->
+    <script src="./js/renderer.js"></script>
+    <script src="./js/sounds.js"></script>
+    <script src="./js/assistant.js"></script>
+    <script src="./js/ui.js"></script>
+
+    <!-- SWIPER (Swiper.js library) -->
+    <script tag="SWIPER">
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: false,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+
+        new Swiper('.swiper-container');
+        swiper.on('slideChange', function () {
+            if (this.activeIndex === 1) {
+                console.log("IM ON SECOND SLIDE!");
+                consoleCAA.style.opacity = "0";
+
+                setTimeout(() => {
+                    consoleCAA.style.display = "none";
+                }, 500);
+                consoleGlow.style.animation = "none";
+            } else {
+                consoleCAA.style.display = "block";
+                consoleCAA.style.opacity = "0";
+
+                setTimeout(() => {
+                    consoleCAA.style.opacity = "1";
+                }, 10);
+
+                consoleGlow.style.animation = "glow 5s infinite alternate";
+            }
+        });
+    </script>
+
+    <!-- CUSTOM DATE SELECTOR IN ASSISTANT (Flatpickr.js library) -->
+    <script tag="CUSTOM DATE SELECTOR IN ASSISTANT">
+        config = {
+            enableTime: true,
+            dateFormat: "d-m-Y",
+            altFormat: "j F, Y",
+            altInput: true,
+        }
+        flatpickr("input[type=datetime-local]", config);
+    </script>
+
+    <!-- KEYBOARD INPUT DETECTOR (Hotkeys.js library) -->
+    <script tag="KEYBOARD INPUT DETECTOR">
+        hotkeys(
+            "right,left,up,down,space,enter,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,1,2,3,4,5,6,7,8,9,0,num_0,num_1,num_2,num_3,num_4,num_5,num_6,num_7,num_8,num_9,num_multiply,num_add,num_enter,num_subtract,num_decimal,num_divide,shift+a,shift+b,shift+c,shift+d,shift+e,shift+f,shift+g,shift+h,shift+i,shift+j,shift+k,shift+l,shift+m,shift+n,shift+o,shift+p,shift+q,shift+r,shift+s,shift+t,shift+u,shift+v,shift+w,shift+x,shift+y,shift+z,",
+            function (event, handler) {
+                soundPlay("sfxKeyboard.wav");
+            }
+        );
+        hotkeys.filter = function (event) {
+            return true;
+        }
+        //How to add the filter to edit labels. <div contentEditable="true"></div>
+        //"contentEditable" Older browsers that do not support drops
+        hotkeys.filter = function (event) {
+
+            const tagName = (event.target || event.srcElement).tagName;
+            return !(tagName.isContentEditable || tagName == 'INPUT' || tagName == 'SELECT' || tagName ==
+                'TEXTAREA');
+        }
+
+        hotkeys.filter = function (event) {
+            const tagName = (event.target || event.srcElement).tagName;
+            hotkeys.setScope(/^(INPUT|TEXTAREA|SELECT)$/.test(tagName) ? 'input' : 'other');
+            return true;
+        }
+    </script>
+
+    <script>
+        var el = document.getElementById('buttons');
+        var sortable = Sortable.create(el);
+    </script>
+</body>
+
+</html>

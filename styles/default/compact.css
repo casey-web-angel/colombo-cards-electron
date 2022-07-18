@@ -1,0 +1,158 @@
+/**█▀▄▀█ █▀▀ █▀▄ █ ▄▀█   █▀█ █░█ █▀▀ █▀█ █▄█
+/**█░▀░█ ██▄ █▄▀ █ █▀█   ▀▀█ █▄█ ██▄ █▀▄ ░█░*/
+@media only screen and (max-width:600px) {
+
+    /* 
+    /** CLASSES */
+    .fa-4x {
+        font-size: 2rem !important;
+    }
+
+    .inputComments {
+        width: 134% !important;
+        margin-left: -40px;
+    }
+
+    .comments {
+        width: 69.4%;
+    }
+
+    /* Boutons principaux */
+    .btn {}
+
+
+    /* Bouton Alertify */
+    .btn-smodal {
+        background: var(--theme-primary);
+    }
+
+    .param-section {
+        font-size: 0.7rem;
+    }
+
+    .color {
+        height: 1.2rem;
+        width: 1.2rem;
+    }
+
+    .console-color {
+        height: 1.2rem;
+        width: 1.2rem;
+    }
+
+    .color:hover {
+        outline: 5px solid white;
+        outline-offset: -30px;
+        cursor: url(../../assets/images/cursors/Hand.cur), auto;
+        transition: 0.2s;
+    }
+
+    .colorJS {
+        -webkit-box-shadow: 0 0 10px rgb(255, 255, 255);
+    }
+
+    .line2 {
+        flex-direction: row;
+    }
+
+    .movie {
+        margin-bottom: 50px;
+        font-size: 0.8rem;
+    }
+
+    .swiper-wrapper {
+        height: 452px;
+    }
+
+    /** IDs */
+
+
+    #console::-webkit-scrollbar {
+        width: 0.35rem;
+    }
+
+    #console::-webkit-scrollbar-track {
+        background: #1e1e24;
+        margin-top: 15px;
+        margin-bottom: 60px;
+        border-radius: 10px;
+    }
+
+    #console::-webkit-scrollbar-thumb {
+        background: var(--theme-primary);
+        border-radius: 10px;
+    }
+
+    #param {
+        width: 98.8%;
+    }
+
+    #buttons {
+
+    }
+
+    #output {
+        font-size: 0.7rem;
+    }
+
+    #console {
+        height: 400px;
+    }
+
+    #param-console-content {
+        width: 400px;
+        margin-left: 150px;
+        padding-right: 2.55rem;
+        font-size: 0.7rem;
+        padding: 1.34rem;
+        margin-top: 0px;
+    }
+
+    #param-assistant-content {
+        width: 400px;
+        margin-left: 150px;
+        padding-right: 2.55rem;
+        font-size: 0.7rem;
+        padding: 1.34rem;
+        margin-top: 0px;
+    }
+
+    #param-theme-content {
+        width: 400px;
+        margin-left: 150px;
+        padding-right: 2.55rem;
+        font-size: 0.7rem;
+        padding: 1.34rem;
+    }
+
+    #param-update-content {
+        width: 400px;
+        margin-left: 150px;
+        padding-right: 2.55rem;
+        font-size: 0.7rem;
+        padding: 1.34rem;
+        margin-top: 0px;
+    }
+
+    #param-credits-content {
+        width: 400px;
+        margin-left: 150px;
+        padding-right: 2.55rem;
+        font-size: 0.7rem;
+        padding: 1.34rem;
+        margin-top: 0px;
+        height: 426px;
+    }
+
+    #console-colors-container {
+        gap: 2px;
+    }
+
+    #slide-1 {
+        height: 452px;
+    }
+
+    #upper-part {
+        height: 452px;
+    }
+}
